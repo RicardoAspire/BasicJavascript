@@ -2,19 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
     <title>Javascript Trainee</title>
-    <style>
-        .header{
-            text-align: center;
-            height: 150px;
-            align-items: center;
-            background-color: #1d3557;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <div class="row header">
@@ -104,7 +95,7 @@
     </div>    
     <div class="row m-2">
         <div class="col-4">
-            <div class="card">
+            <div class="card mb-2">
                 <div class="card-header" style="background-color:#457b9d;">
                     <h3>Bugs and error handling</h3>
                     <div class="card-subtitle mb-2" style="color:white">
@@ -142,7 +133,7 @@
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" placeholder="example@example.com" id="email" >
                             </div>
-                            <div class="col">
+                            <div class="col mb-3">
                                 <p>City</p>
                                 <select class="form-select" id="cityForm">
                                 </select>
@@ -158,13 +149,137 @@
                                 <textarea class="form-control" id="t3" rows="5"></textarea>
                               </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="file" class="form-label">Profile Picture</label>
+                                <input type="file" id="file" onchange="fileValidation()">
+                            </div>
+                            <div id="image"></div>
+                        </div>
                         <div id="errorForm"></div>
                         <input type="submit" class="btn btn-success">
                     </form>
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card mb-2">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Higher order functions</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 1 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of two <b>Higher order functions</b>, <br><br> The first one asign a function to a variable, that function returns the double of a number given, open the console of the browser and type "double(number)", 
+                    <br><br> The second one gives you the list of the students with status "active", open the console of the browser and type "activeStudents"</p>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Regular expressions</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 2 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>Regular expression</b>, pattern of characters that works for a search, open the console of the browser and type "regularExpression("word")", the word will be search in this phrase: </p>
+                    <b>Test phrase with different words, you can try to find any of this words using regular expressions and exec method</b>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Regular expressions</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 6 from Basic block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Regular expression with dates</b>, open the console of the browser and type "regularExpressionDate("value")", the value must be a pattern of digits for this example, it already exists the pattern dd/mm/YYYY for example, but in this example we create another format with regular expressions, so the value must be something like:</p>
+                        <b>dd-dd-dddd dd:dd -> 18-04-2022 01:39</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Modules</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 3 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Modules</b>, open the console of the browser and type "modules("name",age)", there is another JS file imported as a Module, and that file will print the name and age you gave <i>(Currlently not working, there is a problem with the browser and the CORES, but all the code is in JS files).</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Handling events</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 4 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Inline Event Handler</b>, Click on the box, or do a Hover on the box</p>
+                        <div class="box" onmouseover="alert('Mouse Hover!')"><p>Hover</p></div>
+                        <div class="box" onclick="alert('Clicked!')"><p>Click</p></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Handling events</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 4 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Event Listenner Event</b>, click on the box</p>
+                        <div class="box" id="boxListenner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Handling events</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 4 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Event Objects</b>, click on the box, you will see the TimeStamp, the time in ms that takes to execute the event since you press the button</p>
+                        <div class="box" id="boxObject"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Handling events</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 4 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Comparisson of a <b>Standard vs Arrow function</b>, click on the boxes</p>
+                        <div class="box" id="boxStandard"><p>Standard</p></div>
+                        <div class="box" id="boxArrow"><p>Arrow</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="./index.js"></script>
+    <script  src="./index.js"></script>
+    <!-- <script type="module" src="./index.js"></script> -->
 </body>
 </html>

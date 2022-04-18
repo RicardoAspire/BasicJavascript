@@ -1,6 +1,7 @@
 'use-strict'
-/* FIRST EXERCISE */
+//import UserModule,{printName as name, printAge as age} from './advanced';
 
+/* FIRST EXERCISE */
 /* Triangle */
 console.log("TRIANGLE");
 console.log("It has no form of a triangle because the console.log gives a new line by default and it is not possible to cancel that, showing the triangle in the DOM could work, but all there excersises are designed to work in the comand console")
@@ -211,3 +212,94 @@ form.addEventListener('submit', (e)=>{
         errorForm.role = "alert";
     }
 });
+
+function fileValidation(){
+    var fileInput = document.getElementById("file");
+    fileInput.className = "btn btn-warning"
+    var file = fileInput.value;
+    var extensions =  /(\.jpg|\.jpeg|\.png|\.jfif)$/i;
+    if(!extensions.exec(file)){
+        alert("The file has an invalid type.");
+        fileInput.value = "";
+        return false;
+    }else{
+        if(fileInput.files && fileInput.files[0]){
+            //File reader allows web aplications read asynchronously contents of files, it can only access to files that the user has explicitly selected in an input type ="file"
+            var reader = new FileReader();
+            reader.onload = function(e){
+                document.getElementById('image').innerHTML = '<img src ="'+e.target.result+'"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+
+/* HIGHER ORDER FUNCTIONS */
+//Functions that received other functions as parameters, or return other functions as a result 
+//Example 1 function asigned to a varibale 
+let double = function(x){
+    return x*2;
+}
+
+//Example 2 function that receives another function as input
+let students = [
+    {id:1, name:'Ricardo', status:'active'},
+    {id:2, name:'Andrea', status:'active'},
+    {id:3, name:'Omar', status:'inactive'},
+    {id:4, name:'Magaly', status:'active'},
+    {id:5, name:'Abril', status:'inactive'},
+]
+//If the student has an active status, Its added to activeStudents
+let activeStudents = students.filter(function(students){
+    return students.status === 'active';
+});
+
+/* REGULAR EXPRESSIONS */
+//Search text in a phrase
+let text = "Test phrase with different words, you can try to find any of this words using regular expressions and exec method";
+function regularExpression(value){
+    let regExp = new RegExp(value);
+    console.log(regExp.exec(text));
+}
+
+//Validate date format 
+let date =  /\d\d-\d\d-\d\d\d\d \d\d:\d\d/;
+function regularExpressionDate(value){
+    return date.test(value);
+};
+
+/* MODULES */
+function modules(name, age){
+    const user = new UserModule(name,age);
+    name(user);
+    age(user);
+}
+
+/* EVENTS */
+//Event listener 
+const boxListennerDOM = document.getElementById("boxListenner");
+boxListennerDOM.addEventListener("click", function(e){
+    boxListennerDOM.style.background = "blue";
+    alert("Clicked using event listener!");
+});
+
+//Event Object 
+const boxObjectDOM = document.getElementById("boxObject");
+boxObjectDOM.addEventListener("click", function(event){
+    alert(event.timeStamp + "ms");
+});
+
+//Standard vs arrow 
+const boxStandardDOM = document.getElementById("boxStandard");
+const boxArrowDOM = document.getElementById("boxArrow");
+boxStandardDOM.addEventListener("click", function(e){
+    alert('Standard function');
+    //this reffers to the actual div in a "standard function"
+    console.log(this);
+});
+boxArrowDOM.addEventListener("click", e=>{
+    alert('Arrow function');
+    //this reffers to the global webpage in a "arrow function"
+    console.log(this);
+});
+

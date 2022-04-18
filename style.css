@@ -1,0 +1,20 @@
+.header{
+    text-align: center;
+    height: 150px;
+    align-items: center;
+    background-color: #1d3557;
+    color: white;
+}
+.box{
+    height: 80px;
+    width: 80px;
+    background-color: tomato;
+    border-radius: 10px;
+    float: left;
+    margin: 20px;
+}
+.box p{
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+}
