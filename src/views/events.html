@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row header">
+        <h1>Javascript Trainee Ricardo Flores Salcedo</h1>
+        <ul class="nav nav-pills navStyle">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Types and functions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./data.html">Data, Try catch, DOM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./forms.html">Forms, Higher Order Functions, Regular expressions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./events.html">Regular expressions, Modules, Handling events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./http.html">HTTP and Node.js</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row m-2">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Regular expressions</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 6 from Basic block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Regular expression with dates</b>, open the console of the browser and type "regularExpressionDate("value")", the value must be a pattern of digits for this example, it already exists the pattern dd/mm/YYYY for example, but in this example we create another format with regular expressions, so the value must be something like:</p>
+                        <b>dd-dd-dddd dd:dd -> 18-04-2022 01:39</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header" style="background-color:#457b9d;">
+                        <h3>Modules</h3>
+                        <div class="card-subtitle mb-2" style="color:white">
+                            <p>Topic 3 from Advanced block</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Example of a <b>Modules</b>, open the console of the browser and type "modules("name",age)", there is another JS file imported as a Module, and that file will print the name and age you gave <i>(Currlently not working, there is a problem with the browser and the CORES, but all the code is in JS files).</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Handling events</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>Inline Event Handler</b>, Click on the box, or do a Hover on the box</p>
+                    <div class="box" onmouseover="alert('Mouse Hover!')"><p>Hover</p></div>
+                    <div class="box" onclick="alert('Clicked!')"><p>Click</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Handling events</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>Event Listenner Event</b>, click on the box</p>
+                    <div class="box" id="boxListenner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-2">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Handling events</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>Event Objects</b>, click on the box, you will see the TimeStamp, the time in ms that takes to execute the event since you press the button</p>
+                    <div class="box" id="boxObject"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Handling events</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Comparisson of a <b>Standard vs Arrow function</b>, click on the boxes</p>
+                    <div class="box" id="boxStandard"><p>Standard</p></div>
+                    <div class="box" id="boxArrow"><p>Arrow</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script  src="../scripts/events.js"></script>
+</body>
+</html>

@@ -9,5 +9,3 @@ fs.writeFile('./new.txt', "Hello world", function(e){
     }
     console.log("Document created successfully");
 });
-
-

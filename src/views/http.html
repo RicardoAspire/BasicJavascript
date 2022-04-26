@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row header">
+        <h1>Javascript Trainee Ricardo Flores Salcedo</h1>
+        <ul class="nav nav-pills navStyle">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Types and functions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./data.html">Data, Try catch, DOM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./forms.html">Forms, Higher Order Functions, Regular expressions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./events.html">Regular expressions, Modules, Handling events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./http.html">HTTP and Node.js</a>
+            </li>
+        </ul>
+    </div>
+    
+    
+    <div class="row"> 
+        <div class="col m-2">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>HTTP GET</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>GET Request at "requres.in"</b> Choose a number of user</p>
+                    <input type="number" max="12" min="1" id="userGet" onchange="getRequest()">
+                    <div>
+                        <img id="imageGet">
+                        <p id="idGet"></p>
+                        <p id="nameGet"></p>
+                        <p id="emailGet"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col m-2">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>HTTP POST</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a <b>POST Request at "requres.in"</b> please give a Name and a Job, a POST request will be created to "https://reqres.in/api/users", and as a result you will see your data</p>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="namePOST">
+                        <label for="job">Job</label>
+                        <input type="text" id="jobPOST">
+                        <input type="submit" id="submitPOST" class="btn btn-success" value="submit">
+                    </form>
+                    <div class="postBox">
+                        Name given: <b id="namePostResult"></b>
+                    </div>
+                    <div class="postBox">
+                        Job given: <b id="jobPostResult"></b>
+                    </div>
+                    <div class="postBox">
+                        Created at: <b id="timePostResult"></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col m-2">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Node JS</h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a implementation of <b>NodeJs library "Fs"</b>, open the folder nodeJs in the project, and open a "CMD" there, then type "node app.js", that script will create a file in the same folder using Fs library from NodeJs</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m-2">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Node JS </h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a implementation of a <b>Server using NodeJS</b>, open the folder nodeJs in the project, and open a "CMD" there, then type "node server.js", that script will create a server in the port 3000, you can open "http://localhost:3000/" and you will see the message "Node JS server working"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col m-2">
+            <div class="card">
+                <div class="card-header" style="background-color:#457b9d;">
+                    <h3>Node JS </h3>
+                    <div class="card-subtitle mb-2" style="color:white">
+                        <p>Topic 4 from Advanced block</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>Example of a implementation of a <b>NPM image library</b>, open the folder nodeJs in the project, and open a "CMD" there, then type "node image.js", that script will create an image mixing two, one is a forest, and the other is the Nike logo, the output file will be a image with both"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script  src="../scripts/http.js"></script>
+</body>
+</html>
